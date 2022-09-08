@@ -18,9 +18,12 @@ function Detail() {
     getMovies();
   }, []);
 
+  console.log(movieInfo);
   return (
     <div>
-      <h1>Detail</h1>
+      <img src={movieInfo.data.movie.large_cover_image} />
+      <h1>{movieInfo.data.movie.title}</h1>
+      <p>{movieInfo.data.movie.description_full}</p>
     </div>
   );
 }
